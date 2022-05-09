@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box !important;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  position: relative;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  text-align: center;
+  background-color: hsl(244, 38%, 16%);
+  max-width: calc(100vw - 2rem);
+  margin-inline: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-block: 2rem;
+}
+
+.image {
+  max-width: 100%;
+  height: 200px;
+  overflow: hidden;
+  /* background-color: hsl(277, 64%, 61%); */
+  background-color: hsl(286, 96%, 50%);
+}
+
+.card-image {
+  object-fit: fill;
+  opacity: 0.5;
+}
+
+.image-mobile {
+  display: block;
+}
+
+.image-desktop {
+  display: none;
+}
+
+.main-heading {
+  margin: 3rem 0.5rem;
+  margin-bottom: 0;
+}
+
+.main-heading span {
+  color: hsl(277, 64%, 61%);
+}
+
+.main-content {
+  font-size: 15px;
+  color: hsla(0, 0%, 100%, 0.6);
+  margin: 1.5rem 2.5rem;
+  line-height: 1.5rem;
+}
+
+.description {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.description-element {
+  margin: 1rem;
+}
+
+.description h2 {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin-bottom: 0.4rem;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.description p {
+  font-size: 15px;
+  color: hsla(0, 0%, 100%, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+@media screen and (min-width: 680px) {
+  .card {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    max-width: 40rem;
+    text-align: start;
+    margin: 0;
+  }
+  .image-mobile {
+    display: none;
+  }
+  .image-desktop {
+    display: block;
+  }
+  .image {
+    max-width: 40rem;
+    height: 100%;
+  }
+  .content {
+    margin-inline: 4rem;
+  }
+  .main-heading {
+    max-width: 18ch;
+  }
+  .main-content {
+    margin: 1rem 0.5rem;
+    max-width: 37ch;
+  }
+  .description {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .card {
+    max-width: 50rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .card {
+    max-width: 80rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
